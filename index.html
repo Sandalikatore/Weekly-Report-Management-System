@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Report Submission</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Weekly Report Submission</h2>
+        
+        <!-- Form Section -->
+        <form id="reportForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+
+            <label for="week">Week Number:</label>
+            <select id="week" required>
+                <option value="">Select Week</option>
+                <option value="Week 1">Week 1</option>
+                <option value="Week 2">Week 2</option>
+                <option value="Week 3">Week 3</option>
+                <option value="Week 4">Week 4</option>
+            </select>
+
+            <label for="tasks">Tasks Performed:</label>
+            <textarea id="tasks" required></textarea>
+
+            <label for="learnings">Key Learnings:</label>
+            <textarea id="learnings" required></textarea>
+
+            <label for="challenges">Challenges Faced:</label>
+            <textarea id="challenges" required></textarea>
+
+            <label for="plan">Plan for Next Week:</label>
+            <textarea id="plan" required></textarea>
+
+            <button type="button" onclick="generatePreview()">Submit</button>
+            <button type="button" onclick="downloadReport()">Download</button>
+        </form>
+
+        <!-- Preview Section -->
+        <div id="preview" class="preview">
+            <h3>Report Preview</h3>
+            <pre id="previewContent"></pre>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
